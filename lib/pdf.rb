@@ -60,6 +60,7 @@ end
 require "pdf/errors"
 require "pdf/reference"
 require "pdf/name_tree"
-require "pdf/document"
+require "pdf/graphics"
 require "pdf/object_store"
+require "pdf/document"
 
