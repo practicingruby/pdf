@@ -57,8 +57,9 @@ module PDF
   end
 end
 
-
 require "pdf/errors"
 require "pdf/reference"
 require "pdf/name_tree"
 require "pdf/document"
+require "pdf/object_store"
+

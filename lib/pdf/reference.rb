@@ -24,7 +24,7 @@ module PDF
     
     def object 
       output = "#{@identifier} #{gen} obj\n" <<
-               Prawn::PdfObject(data) << "\n"
+               PDF.serialize(data) << "\n"
       if @stream
         output << "stream\n" << @stream << "\nendstream\n" 
       end
@@ -73,7 +73,7 @@ module PDF
       case obj
       when Reference
         []
-      when Hash
+      when ::Hash
         obj.values.map{|v| [v] + referenced_objects(v) }
       when Array
         obj.map{|v| [v] + referenced_objects(v) }
